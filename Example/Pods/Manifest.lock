@@ -1,0 +1,33 @@
+PODS:
+  - Aspects (1.4.1)
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - SZDaily (0.0.1):
+    - SZDaily/Forbidden (= 0.0.1)
+  - SZDaily/Forbidden (0.0.1):
+    - Aspects
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - SZDaily (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - Aspects
+    - FBSnapshotTestCase
+
+EXTERNAL SOURCES:
+  SZDaily:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  SZDaily: 1e184203a13875aa63847dc4e608555e3384befb
+
+PODFILE CHECKSUM: b5144eaff895fa1f1b0a99a30b4922c754e86a19
+
+COCOAPODS: 1.8.4
