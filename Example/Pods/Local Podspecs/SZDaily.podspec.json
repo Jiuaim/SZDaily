@@ -1,6 +1,6 @@
 {
   "name": "SZDaily",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "summary": "Daily knowledge record.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/jiuaim/SZDaily",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/jiuaim/SZDaily.git",
-    "tag": "0.0.1"
+    "tag": "0.0.2"
   },
   "platforms": {
     "ios": "8.0"
@@ -28,8 +28,15 @@
       "dependencies": {
         "Aspects": [
 
+        ],
+        "SZDaily/Macro": [
+
         ]
       }
+    },
+    {
+      "name": "Macro",
+      "source_files": "SZDaily/Macro/*.h"
     }
   ]
 }

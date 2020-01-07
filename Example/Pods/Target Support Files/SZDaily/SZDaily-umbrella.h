@@ -14,6 +14,7 @@
 #import "NSObject+forbidden.h"
 #import "UIControl+forbidden.h"
 #import "UIGestureRecognizer+forbidden.h"
+#import "SZShortMacro.h"
 
 FOUNDATION_EXPORT double SZDailyVersionNumber;
 FOUNDATION_EXPORT const unsigned char SZDailyVersionString[];

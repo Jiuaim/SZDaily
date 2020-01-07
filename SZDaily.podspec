@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SZDaily'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'Daily knowledge record.'
 
 # This description is used to generate tags and improve search results.
@@ -40,5 +40,10 @@ TODO: Add long description of the pod here.
     forbidden.public_header_files = 'SZDaily/Forbidden/*.h'
     forbidden.source_files = 'SZDaily/Forbidden/*.{h,m}'
     forbidden.dependency 'Aspects'
+    forbidden.dependency 'SZDaily/Macro'
+  end
+  
+  s.subspec 'Macro' do |macro|
+    macro.source_files = 'SZDaily/Macro/*.h'
   end
 end

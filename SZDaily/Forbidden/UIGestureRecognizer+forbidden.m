@@ -10,10 +10,7 @@
 #import <Aspects/Aspects.h>
 #import <objc/runtime.h>
 #import "NSObject+forbidden.h"
-
-#define WeakObj(o) autoreleasepool{} __weak typeof(o) o##Weak = o;
-#define StrongObj(o) autoreleasepool{} __strong typeof(o) o = o##Weak;
-
+#import "SZShortMacro.h"
 
 @implementation UIGestureRecognizer (forbidden)
 
