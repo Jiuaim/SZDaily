@@ -1,6 +1,6 @@
 # SZDaily
 
-[![CI Status](https://img.shields.io/travis/hsz/SZDaily.svg?style=flat)](https://travis-ci.org/hsz/SZDaily)
+[![CI Status](https://travis-ci.org/Jiuaim/SZDaily.svg?branch=master)](https://travis-ci.org/hsz/SZDaily)
 [![Version](https://img.shields.io/cocoapods/v/SZDaily.svg?style=flat)](https://cocoapods.org/pods/SZDaily)
 [![License](https://img.shields.io/cocoapods/l/SZDaily.svg?style=flat)](https://cocoapods.org/pods/SZDaily)
 [![Platform](https://img.shields.io/cocoapods/p/SZDaily.svg?style=flat)](https://cocoapods.org/pods/SZDaily)
@@ -22,7 +22,7 @@ pod 'SZDaily'
 
 ## Author
 
-hsz, shengzhong.huang@zhangmen.com
+Jiuaim, Jiuaim@163.com
 
 ## License
 
