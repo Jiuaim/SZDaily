@@ -8,10 +8,12 @@ PODS:
   - SZDaily (0.0.2):
     - SZDaily/Forbidden (= 0.0.2)
     - SZDaily/Macro (= 0.0.2)
+    - SZDaily/Preview (= 0.0.2)
   - SZDaily/Forbidden (0.0.2):
     - Aspects
     - SZDaily/Macro
   - SZDaily/Macro (0.0.2)
+  - SZDaily/Preview (0.0.2)
 
 DEPENDENCIES:
   - FBSnapshotTestCase
@@ -29,7 +31,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  SZDaily: 1474a1dab10cbaccde26fd21120327b4c8e98075
+  SZDaily: b4d5b771a9cae1f44550d1411df5188fb5460613
 
 PODFILE CHECKSUM: b5144eaff895fa1f1b0a99a30b4922c754e86a19
 

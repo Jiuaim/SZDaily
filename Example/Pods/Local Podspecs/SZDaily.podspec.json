@@ -18,8 +18,8 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "SZDaily/SZForbidden.h",
-  "public_header_files": "SZDaily/SZForbidden.h",
+  "source_files": "SZDaily/SZHeader.h",
+  "public_header_files": "SZDaily/SZHeader.h",
   "subspecs": [
     {
       "name": "Forbidden",
@@ -33,6 +33,11 @@
 
         ]
       }
+    },
+    {
+      "name": "Preview",
+      "public_header_files": "SZDaily/Preview/*.h",
+      "source_files": "SZDaily/Preview/*.{h,m}"
     },
     {
       "name": "Macro",

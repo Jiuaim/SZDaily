@@ -14,9 +14,9 @@
 #import <SZDaily/NSObject+forbidden.h>
 #import <SZDaily/UIGestureRecognizer+forbidden.h>
 #else
-#import "SZDaily/UIControl+forbidden.h"
-#import "SZDaily/NSObject+forbidden.h"
-#import "SZDaily/UIGestureRecognizer+forbidden.h"
+#import "UIControl+forbidden.h"
+#import "NSObject+forbidden.h"
+#import "UIGestureRecognizer+forbidden.h"
 #endif
 
 #endif /* SZForbidden_h */

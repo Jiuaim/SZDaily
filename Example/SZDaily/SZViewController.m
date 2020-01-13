@@ -7,6 +7,7 @@
 //
 
 #import "SZViewController.h"
+#import "SZHeader.h"
 
 @interface SZViewController ()
 
@@ -21,11 +22,28 @@
     
     [self addForbiddenBtn];
     [self addForbiddenView];
+    
+    [self fetchData];
+}
+
+- (void)fetchData {
+    dispatch_async(dispatch_queue_create("com.test.preview", 0), ^{
+        sleep(5);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self sz_endPreview];
+        });
+    });
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self sz_startPreview];
 }
 
 // MARK: Forbidden
 - (void)addForbiddenBtn {
     UIButton *btn = [[UIButton alloc] init];
+    btn.isPreView = YES;
     btn.frame = CGRectMake(0, 100, 100, 100);
     btn.backgroundColor = [UIColor redColor];
     [btn addTarget:self action:@selector(forbiddenAction:) forControlEvents:UIControlEventTouchUpInside];

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SZDaily'
-  s.version          = '0.0.2'
+  s.version          = '0.0.3'
   s.summary          = 'Daily knowledge record.'
 
 # This description is used to generate tags and improve search results.
@@ -30,8 +30,8 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'SZDaily/SZForbidden.h'
-  s.public_header_files = 'SZDaily/SZForbidden.h'
+  s.source_files = 'SZDaily/SZHeader.h'
+  s.public_header_files = 'SZDaily/SZHeader.h'
   
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
@@ -41,6 +41,11 @@ TODO: Add long description of the pod here.
     forbidden.source_files = 'SZDaily/Forbidden/*.{h,m}'
     forbidden.dependency 'Aspects'
     forbidden.dependency 'SZDaily/Macro'
+  end
+  
+  s.subspec 'Preview' do |preview|
+    preview.public_header_files = 'SZDaily/Preview/*.h'
+    preview.source_files = 'SZDaily/Preview/*.{h,m}'
   end
   
   s.subspec 'Macro' do |macro|
