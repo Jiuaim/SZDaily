@@ -1,6 +1,0 @@
-framework module SZDaily {
-  umbrella header "SZDaily-umbrella.h"
-
-  export *
-  module * { export * }
-}
