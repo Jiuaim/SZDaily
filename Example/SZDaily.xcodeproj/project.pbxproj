@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2180EB21247FB622008BC6F7 /* SZAutoTableHeaderHeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2180EB20247FB622008BC6F7 /* SZAutoTableHeaderHeightViewController.m */; };
 		21C386DF2470065E0036E7B1 /* SZDiedLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C386DE2470065E0036E7B1 /* SZDiedLockViewController.m */; };
 		21CAE28B24727DFD00CADEB3 /* SZTableFreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CAE28A24727DFD00CADEB3 /* SZTableFreshViewController.m */; };
 		2E496882AB687049D3D6A726 /* Pods_SZDaily_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A591C2E5603CFF7E85556AF1 /* Pods_SZDaily_Example.framework */; };
@@ -41,6 +42,8 @@
 /* Begin PBXFileReference section */
 		0D5B0DF4E2D44798AA41AEC8 /* Pods_SZDaily_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SZDaily_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7884B1367588E1ADD9FBB7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		2180EB1F247FB622008BC6F7 /* SZAutoTableHeaderHeightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZAutoTableHeaderHeightViewController.h; sourceTree = "<group>"; };
+		2180EB20247FB622008BC6F7 /* SZAutoTableHeaderHeightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZAutoTableHeaderHeightViewController.m; sourceTree = "<group>"; };
 		21C386DD2470065E0036E7B1 /* SZDiedLockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZDiedLockViewController.h; sourceTree = "<group>"; };
 		21C386DE2470065E0036E7B1 /* SZDiedLockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZDiedLockViewController.m; sourceTree = "<group>"; };
 		21CAE28924727DFD00CADEB3 /* SZTableFreshViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZTableFreshViewController.h; sourceTree = "<group>"; };
@@ -108,6 +111,8 @@
 				21C386DE2470065E0036E7B1 /* SZDiedLockViewController.m */,
 				21CAE28924727DFD00CADEB3 /* SZTableFreshViewController.h */,
 				21CAE28A24727DFD00CADEB3 /* SZTableFreshViewController.m */,
+				2180EB1F247FB622008BC6F7 /* SZAutoTableHeaderHeightViewController.h */,
+				2180EB20247FB622008BC6F7 /* SZAutoTableHeaderHeightViewController.m */,
 			);
 			name = Learn;
 			sourceTree = "<group>";
@@ -362,11 +367,13 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-SZDaily_Example/Pods-SZDaily_Example-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Aspects/Aspects.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
 				"${BUILT_PRODUCTS_DIR}/SZDaily/SZDaily.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Aspects.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SZDaily.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -404,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21C386DF2470065E0036E7B1 /* SZDiedLockViewController.m in Sources */,
+				2180EB21247FB622008BC6F7 /* SZAutoTableHeaderHeightViewController.m in Sources */,
 				6003F59E195388D20070C39A /* SZAppDelegate.m in Sources */,
 				21CAE28B24727DFD00CADEB3 /* SZTableFreshViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* SZViewController.m in Sources */,

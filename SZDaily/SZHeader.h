@@ -12,9 +12,11 @@
 #if __has_include(<SZDaily/SZHeader.h>)
 #import <SZDaily/SZForbidden.h>
 #import <SZDaily/SZPreview.h>
+#import <SZDaily/SZCategory.h>
 #else
 #import "SZForbidden.h"
 #import "SZPreview.h"
+#import "SZCategory.h"
 #endif
 
 #endif /* SZHeader_h */

@@ -28,7 +28,7 @@
 
 - (void)fetchData {
     dispatch_async(dispatch_queue_create("com.test.preview", 0), ^{
-        sleep(5);
+        sleep(2);
         dispatch_async(dispatch_get_main_queue(), ^{
             [self sz_endPreview];
         });
