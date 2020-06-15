@@ -8,6 +8,7 @@
 
 #import "SZViewController.h"
 #import "SZHeader.h"
+#import "SZPlayerViewController.h"
 
 @interface SZViewController ()
 
@@ -52,6 +53,8 @@
 
 - (void)forbiddenAction:(UIButton *)btn {
     NSLog(@"forbiddenAction------button");
+    SZPlayerViewController *player = [SZPlayerViewController new];
+    [self.navigationController pushViewController:player animated:YES];
 }
 
 - (void)addForbiddenView {

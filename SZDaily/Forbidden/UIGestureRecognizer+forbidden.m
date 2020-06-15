@@ -22,16 +22,18 @@
 
 - (instancetype)xt_initWithTarget:(id)target action:(SEL)action {
     @WeakObj(target);
-    [target aspect_hookSelector:action withOptions:AspectPositionInstead usingBlock:^(id<AspectInfo> aspectInfo){
-        @StrongObj(target);
-        NSObject *ob = (NSObject *)target;
-        if (!ob.eventUnavailable) {
-            ob.eventUnavailable = YES;
-            NSInvocation *invocation = aspectInfo.originalInvocation;
-            [invocation invoke];
-            [ob performSelector:@selector(setEventUnavailable:) withObject:@(NO) afterDelay:ob.sz_eventInterval];
-        }
-    } error:NULL];
+    if ([self isKindOfClass:[UITapGestureRecognizer class]]) {// 只对轻拍手势处理
+        [target aspect_hookSelector:action withOptions:AspectPositionInstead usingBlock:^(id<AspectInfo> aspectInfo){
+            @StrongObj(target);
+            NSObject *ob = (NSObject *)target;
+            if (!ob.eventUnavailable) {
+                ob.eventUnavailable = YES;
+                NSInvocation *invocation = aspectInfo.originalInvocation;
+                [invocation invoke];
+                [ob performSelector:@selector(setEventUnavailable:) withObject:@(NO) afterDelay:ob.sz_eventInterval];
+            }
+        } error:NULL];
+    }
     return [self xt_initWithTarget:target action:action];
 }
 

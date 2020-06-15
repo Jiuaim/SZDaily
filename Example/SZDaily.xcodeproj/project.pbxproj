@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210DDFC22497672400722B97 /* SZPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210DDFC12497672400722B97 /* SZPlayerViewController.m */; };
+		210DDFC5249767D700722B97 /* SZPlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 210DDFC4249767D700722B97 /* SZPlayerTableViewCell.m */; };
+		210DDFC8249768EE00722B97 /* SZPlayerCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 210DDFC7249768EE00722B97 /* SZPlayerCollectionViewFlowLayout.m */; };
+		210DDFCB24976A4000722B97 /* SZPlayerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 210DDFCA24976A4000722B97 /* SZPlayerCollectionViewCell.m */; };
 		2180EB21247FB622008BC6F7 /* SZAutoTableHeaderHeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2180EB20247FB622008BC6F7 /* SZAutoTableHeaderHeightViewController.m */; };
 		21C386DF2470065E0036E7B1 /* SZDiedLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C386DE2470065E0036E7B1 /* SZDiedLockViewController.m */; };
 		21CAE28B24727DFD00CADEB3 /* SZTableFreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CAE28A24727DFD00CADEB3 /* SZTableFreshViewController.m */; };
@@ -42,6 +46,15 @@
 /* Begin PBXFileReference section */
 		0D5B0DF4E2D44798AA41AEC8 /* Pods_SZDaily_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SZDaily_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A7884B1367588E1ADD9FBB7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		210DDFC02497672400722B97 /* SZPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZPlayerViewController.h; sourceTree = "<group>"; };
+		210DDFC12497672400722B97 /* SZPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZPlayerViewController.m; sourceTree = "<group>"; };
+		210DDFC3249767D700722B97 /* SZPlayerTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZPlayerTableViewCell.h; sourceTree = "<group>"; };
+		210DDFC4249767D700722B97 /* SZPlayerTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZPlayerTableViewCell.m; sourceTree = "<group>"; };
+		210DDFC6249768EE00722B97 /* SZPlayerCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZPlayerCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		210DDFC7249768EE00722B97 /* SZPlayerCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZPlayerCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		210DDFC924976A4000722B97 /* SZPlayerCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZPlayerCollectionViewCell.h; sourceTree = "<group>"; };
+		210DDFCA24976A4000722B97 /* SZPlayerCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZPlayerCollectionViewCell.m; sourceTree = "<group>"; };
+		210DDFCC24976D5600722B97 /* UIKitMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitMacro.h; sourceTree = "<group>"; };
 		2180EB1F247FB622008BC6F7 /* SZAutoTableHeaderHeightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZAutoTableHeaderHeightViewController.h; sourceTree = "<group>"; };
 		2180EB20247FB622008BC6F7 /* SZAutoTableHeaderHeightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZAutoTableHeaderHeightViewController.m; sourceTree = "<group>"; };
 		21C386DD2470065E0036E7B1 /* SZDiedLockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZDiedLockViewController.h; sourceTree = "<group>"; };
@@ -104,6 +117,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		210DDFBE2497664B00722B97 /* Play */ = {
+			isa = PBXGroup;
+			children = (
+				210DDFBF2497668300722B97 /* Player */,
+			);
+			name = Play;
+			sourceTree = "<group>";
+		};
+		210DDFBF2497668300722B97 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				210DDFC02497672400722B97 /* SZPlayerViewController.h */,
+				210DDFC12497672400722B97 /* SZPlayerViewController.m */,
+				210DDFC3249767D700722B97 /* SZPlayerTableViewCell.h */,
+				210DDFC4249767D700722B97 /* SZPlayerTableViewCell.m */,
+				210DDFC6249768EE00722B97 /* SZPlayerCollectionViewFlowLayout.h */,
+				210DDFC7249768EE00722B97 /* SZPlayerCollectionViewFlowLayout.m */,
+				210DDFC924976A4000722B97 /* SZPlayerCollectionViewCell.h */,
+				210DDFCA24976A4000722B97 /* SZPlayerCollectionViewCell.m */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
 		21C386DC2470063A0036E7B1 /* Learn */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +190,7 @@
 		6003F593195388D20070C39A /* Example for SZDaily */ = {
 			isa = PBXGroup;
 			children = (
+				210DDFBE2497664B00722B97 /* Play */,
 				21C386DC2470063A0036E7B1 /* Learn */,
 				6003F59C195388D20070C39A /* SZAppDelegate.h */,
 				6003F59D195388D20070C39A /* SZAppDelegate.m */,
@@ -175,6 +212,7 @@
 				6003F596195388D20070C39A /* InfoPlist.strings */,
 				6003F599195388D20070C39A /* main.m */,
 				6003F59B195388D20070C39A /* SZDaily-Prefix.pch */,
+				210DDFCC24976D5600722B97 /* UIKitMacro.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -414,8 +452,12 @@
 				2180EB21247FB622008BC6F7 /* SZAutoTableHeaderHeightViewController.m in Sources */,
 				6003F59E195388D20070C39A /* SZAppDelegate.m in Sources */,
 				21CAE28B24727DFD00CADEB3 /* SZTableFreshViewController.m in Sources */,
+				210DDFCB24976A4000722B97 /* SZPlayerCollectionViewCell.m in Sources */,
+				210DDFC22497672400722B97 /* SZPlayerViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* SZViewController.m in Sources */,
+				210DDFC8249768EE00722B97 /* SZPlayerCollectionViewFlowLayout.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				210DDFC5249767D700722B97 /* SZPlayerTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
