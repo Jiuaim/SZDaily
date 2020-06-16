@@ -12,6 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SZPlayerTableViewCell : UITableViewCell
 
+- (void)cellWillEndDisplay;
+
 @end
 
 NS_ASSUME_NONNULL_END

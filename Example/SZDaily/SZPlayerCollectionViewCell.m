@@ -34,9 +34,14 @@
     return self;
 }
 
+- (void)resetCell {
+    self.playBtn.hidden = NO;
+}
+
 - (void)playAction {
     NSLog(@"点击播放");
     if ([self.delegate respondsToSelector:@selector(playerCollectionViewCellPlayAction:containView:)]) {
+        self.playBtn.hidden = YES;
         [self.delegate playerCollectionViewCellPlayAction:self containView:self.mediaContainView];
     }
 }

@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, weak) id<SZPlayerCollectionViewCellDelegate> delegate;
 
+- (void)resetCell;
+
 + (CGFloat)cellWidth;
 + (CGFloat)cellHeight;
 @end

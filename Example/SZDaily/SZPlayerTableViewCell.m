@@ -12,7 +12,7 @@
 #import <AVKit/AVKit.h>
 #import "Masonry.h"
 
-@interface SZPlayerTableViewCell() <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout> {
+@interface SZPlayerTableViewCell() <UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, SZPlayerCollectionViewCellDelegate> {
     NSInteger _currentIndex;
     CGFloat _dragStartX;
     CGFloat _dragEndX;
@@ -30,9 +30,17 @@
 
 @implementation SZPlayerTableViewCell
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(parseMediaPlayer) name:@"mediaPageWillEndShow" object:nil];
+        
         [self.contentView addSubview:self.collectionView];
         [self.collectionView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.equalTo(self.contentView);
@@ -43,11 +51,33 @@
     return self;
 }
 
+- (void)cellWillEndDisplay {
+    [self.player pause];
+}
+
+- (void)parseMediaPlayer {
+    [self.player pause];
+}
+
+- (void)startPlayWithContainView:(UIView *)containView {
+    NSString *urlString = @"http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4";
+    if (!urlString.length || !containView) return;
+    self.player = [AVPlayer playerWithURL:[NSURL URLWithString:urlString]];
+    self.playerViewController.player = self.player;
+    [self.player play];
+    
+    if (self.playerViewController.view.superview) [self.playerViewController.view removeFromSuperview];
+    [containView addSubview:self.playerViewController.view];
+    [self.playerViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(containView);
+    }];
+}
+
 - (void)fixCellToCenter {
     float dragMiniDistance = self.bounds.size.width / 20.0f;
     if (_dragStartX -  _dragEndX >= dragMiniDistance) {
         _currentIndex -= 1;//向右
-    }else if(_dragEndX -  _dragStartX >= dragMiniDistance){
+    } else if(_dragEndX -  _dragStartX >= dragMiniDistance) {
         _currentIndex += 1;//向左
     }
     NSInteger maxIndex = [self.collectionView numberOfItemsInSection:0] - 1;
@@ -80,11 +110,16 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     SZPlayerCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:NSStringFromClass(SZPlayerCollectionViewCell.class) forIndexPath:indexPath];
+    cell.delegate = self;
     cell.backgroundColor = [UIColor greenColor];
     return cell;
 }
 
 #pragma mark - UIScrollViewDelegate
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self parseMediaPlayer];
+}
+
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     _dragStartX = scrollView.contentOffset.x;
 }
@@ -99,6 +134,21 @@
 #pragma mark - UICollectionViewDelegateFlowLayout
 - (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return UIEdgeInsetsMake(0, [self collectionInset], 0, [self collectionInset]);
+}
+
+#pragma mark - SZPlayerCollectionViewCellDelegate
+- (void)playerCollectionViewCellPlayAction:(SZPlayerCollectionViewCell *)currentCell
+                               containView:(UIView *)containView {
+    NSArray *indexpaths = [self.collectionView indexPathsForVisibleItems];
+    for (NSIndexPath *indexPath in indexpaths) {
+        SZPlayerCollectionViewCell *cell = (SZPlayerCollectionViewCell *)[self.collectionView cellForItemAtIndexPath:indexPath];
+        if (cell == currentCell) continue;
+        [cell resetCell];
+    }
+
+    [self.player pause];
+    self.player = nil;
+    [self startPlayWithContainView:containView];
 }
 
 - (UICollectionView *)collectionView {

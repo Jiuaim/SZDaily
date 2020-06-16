@@ -18,6 +18,12 @@
 
 @implementation SZPlayerViewController
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"mediaPageWillEndShow" object:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -38,6 +44,13 @@
     SZPlayerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass(SZPlayerTableViewCell.class) forIndexPath:indexPath];
     cell.backgroundColor = [UIColor redColor];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ([cell isKindOfClass:SZPlayerTableViewCell.class] && [cell respondsToSelector:@selector(cellWillEndDisplay)]) {
+        SZPlayerTableViewCell *playerCell = (SZPlayerTableViewCell *)cell;
+        [playerCell cellWillEndDisplay];
+    }
 }
 
 - (UITableView *)tableView {
