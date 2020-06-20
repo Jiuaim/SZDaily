@@ -55,6 +55,8 @@
 		210DDFC924976A4000722B97 /* SZPlayerCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZPlayerCollectionViewCell.h; sourceTree = "<group>"; };
 		210DDFCA24976A4000722B97 /* SZPlayerCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZPlayerCollectionViewCell.m; sourceTree = "<group>"; };
 		210DDFCC24976D5600722B97 /* UIKitMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitMacro.h; sourceTree = "<group>"; };
+		210DDFF1249DADA700722B97 /* Problem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Problem.h; sourceTree = "<group>"; };
+		210DDFF6249DB57400722B97 /* Pod.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Pod.md; sourceTree = "<group>"; };
 		2180EB1F247FB622008BC6F7 /* SZAutoTableHeaderHeightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZAutoTableHeaderHeightViewController.h; sourceTree = "<group>"; };
 		2180EB20247FB622008BC6F7 /* SZAutoTableHeaderHeightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZAutoTableHeaderHeightViewController.m; sourceTree = "<group>"; };
 		21C386DD2470065E0036E7B1 /* SZDiedLockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZDiedLockViewController.h; sourceTree = "<group>"; };
@@ -140,6 +142,14 @@
 			name = Player;
 			sourceTree = "<group>";
 		};
+		210DDFF5249DB54400722B97 /* Mark */ = {
+			isa = PBXGroup;
+			children = (
+				210DDFF6249DB57400722B97 /* Pod.md */,
+			);
+			name = Mark;
+			sourceTree = "<group>";
+		};
 		21C386DC2470063A0036E7B1 /* Learn */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +200,7 @@
 		6003F593195388D20070C39A /* Example for SZDaily */ = {
 			isa = PBXGroup;
 			children = (
+				210DDFF5249DB54400722B97 /* Mark */,
 				210DDFBE2497664B00722B97 /* Play */,
 				21C386DC2470063A0036E7B1 /* Learn */,
 				6003F59C195388D20070C39A /* SZAppDelegate.h */,
@@ -213,6 +224,7 @@
 				6003F599195388D20070C39A /* main.m */,
 				6003F59B195388D20070C39A /* SZDaily-Prefix.pch */,
 				210DDFCC24976D5600722B97 /* UIKitMacro.h */,
+				210DDFF1249DADA700722B97 /* Problem.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
