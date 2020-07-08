@@ -39,6 +39,9 @@
  4.二三级页面返回清除图片缓存
  */
 
+// 5669 × 1174
+#define kBigImageLink @"https://xiamoon.oss-cn-hangzhou.aliyuncs.com/4444.png"
+
 @interface SZImageCacheViewController ()
 
 @property (nonatomic, strong) UIImageView *imageView1;
@@ -47,8 +50,6 @@
 @end
 
 @implementation SZImageCacheViewController
-//    5669 × 1174
-// https://xiamoon.oss-cn-hangzhou.aliyuncs.com/4444.png
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -102,7 +103,7 @@
     image.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.width * 1174 / 5669.0);
     self.imageView1 = image;
     
-    NSString *urlString = @"https://xiamoon.oss-cn-hangzhou.aliyuncs.com/4444.png";
+    NSString *urlString = kBigImageLink;
     CGFloat scale = [UIScreen mainScreen].scale;
     int width = (self.view.frame.size.width - 40) * scale;
     int height = width * (1174 / 5669.0);
@@ -123,7 +124,7 @@
 }
 
 - (void)click1 {
-//    [[SDImageCache sharedImageCache] removeImageFromMemoryForKey:@"https://oss-cn-hangzhou.aliyuncs.com/big-class/product/info/ebeb42cd69f345659481ca7b5ba34c16.png"];
+//    [[SDImageCache sharedImageCache] removeImageFromMemoryForKey:kBigImageLink];
     self.imageView1.image = nil;[UIImage imageNamed:@"coupon_ expire_icon"];
 //    [self.imageView1 removeFromSuperview];
 //    self.imageView1 = nil;
@@ -136,7 +137,7 @@
 
 // SD缓存中和回传显示(自动设置)的图片是同一张
 - (void)testIsEqual {
-    UIImage *image1 = [[SDImageCache sharedImageCache] imageFromCacheForKey:@"https://xiamoon.oss-cn-hangzhou.aliyuncs.com/4444.png"];
+    UIImage *image1 = [[SDImageCache sharedImageCache] imageFromCacheForKey:kBigImageLink];
     UIImage *image2 = self.imageView1.image;
     
     NSLog(@"%d", [image1 isEqual:image2]);
