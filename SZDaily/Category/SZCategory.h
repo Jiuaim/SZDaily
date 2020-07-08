@@ -11,8 +11,10 @@
 
 #if __has_include(<SZDaily/SZCategory.h>)
 #import <SZDaily/UITableView+AutoLayoutHeader.h>
+#import <SZDaily/UIImage+SZImage.h>
 #else
 #import "UITableView+AutoLayoutHeader.h"
+#import "UIImage+SZImage.h"
 #endif
 
 #endif /* SZCategory_h */

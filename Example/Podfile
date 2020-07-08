@@ -5,6 +5,7 @@ platform :ios, '8.0'
 target 'SZDaily_Example' do
   pod 'SZDaily', :path => '../'
   pod 'Masonry'
+  pod 'SDWebImage', '5.6.0'
 
   target 'SZDaily_Tests' do
     inherit! :search_paths

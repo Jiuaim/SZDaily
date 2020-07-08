@@ -22,7 +22,7 @@ static NSTimeInterval defaultActionTime = 1.0;
 }
 
 - (void)setSz_eventInterval:(NSTimeInterval)qi_eventInterval {
-    objc_setAssociatedObject(self, sz_eventIntervalKey, @(qi_eventInterval?:defaultActionTime), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, sz_eventIntervalKey, @(qi_eventInterval?:defaultActionTime), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (BOOL)eventUnavailable {
@@ -30,7 +30,7 @@ static NSTimeInterval defaultActionTime = 1.0;
 }
 
 - (void)setEventUnavailable:(BOOL)eventUnavailable {
-    objc_setAssociatedObject(self, eventUnavailableKey, @(eventUnavailable), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, eventUnavailableKey, @(eventUnavailable), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end
