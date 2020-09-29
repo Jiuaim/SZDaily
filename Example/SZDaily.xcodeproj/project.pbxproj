@@ -15,6 +15,7 @@
 		217256A124AC8428003B7DB7 /* subway.png in Resources */ = {isa = PBXBuildFile; fileRef = 217256A024AC8428003B7DB7 /* subway.png */; };
 		217256A324AC88F6003B7DB7 /* 4444.png in Resources */ = {isa = PBXBuildFile; fileRef = 217256A224AC88F6003B7DB7 /* 4444.png */; };
 		2180EB21247FB622008BC6F7 /* SZAutoTableHeaderHeightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2180EB20247FB622008BC6F7 /* SZAutoTableHeaderHeightViewController.m */; };
+		2192F15F252308F10031F726 /* SZGifImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2192F15E252308F10031F726 /* SZGifImageView.m */; };
 		21C386DF2470065E0036E7B1 /* SZDiedLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C386DE2470065E0036E7B1 /* SZDiedLockViewController.m */; };
 		21CAE28B24727DFD00CADEB3 /* SZTableFreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CAE28A24727DFD00CADEB3 /* SZTableFreshViewController.m */; };
 		2E496882AB687049D3D6A726 /* Pods_SZDaily_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A591C2E5603CFF7E85556AF1 /* Pods_SZDaily_Example.framework */; };
@@ -66,6 +67,8 @@
 		217256A224AC88F6003B7DB7 /* 4444.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4444.png; sourceTree = "<group>"; };
 		2180EB1F247FB622008BC6F7 /* SZAutoTableHeaderHeightViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZAutoTableHeaderHeightViewController.h; sourceTree = "<group>"; };
 		2180EB20247FB622008BC6F7 /* SZAutoTableHeaderHeightViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZAutoTableHeaderHeightViewController.m; sourceTree = "<group>"; };
+		2192F15D252308F10031F726 /* SZGifImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZGifImageView.h; sourceTree = "<group>"; };
+		2192F15E252308F10031F726 /* SZGifImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZGifImageView.m; sourceTree = "<group>"; };
 		21C386DD2470065E0036E7B1 /* SZDiedLockViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZDiedLockViewController.h; sourceTree = "<group>"; };
 		21C386DE2470065E0036E7B1 /* SZDiedLockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZDiedLockViewController.m; sourceTree = "<group>"; };
 		21CAE28924727DFD00CADEB3 /* SZTableFreshViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZTableFreshViewController.h; sourceTree = "<group>"; };
@@ -129,6 +132,7 @@
 		210DDFBE2497664B00722B97 /* Play */ = {
 			isa = PBXGroup;
 			children = (
+				2192F15C252308C30031F726 /* Gif */,
 				210DDFBF2497668300722B97 /* Player */,
 			);
 			name = Play;
@@ -155,6 +159,15 @@
 				210DDFF6249DB57400722B97 /* Pod.md */,
 			);
 			name = Mark;
+			sourceTree = "<group>";
+		};
+		2192F15C252308C30031F726 /* Gif */ = {
+			isa = PBXGroup;
+			children = (
+				2192F15D252308F10031F726 /* SZGifImageView.h */,
+				2192F15E252308F10031F726 /* SZGifImageView.m */,
+			);
+			name = Gif;
 			sourceTree = "<group>";
 		};
 		21C386DC2470063A0036E7B1 /* Learn */ = {
@@ -482,6 +495,7 @@
 				2172569224AC41EF003B7DB7 /* SZImageCacheViewController.m in Sources */,
 				2180EB21247FB622008BC6F7 /* SZAutoTableHeaderHeightViewController.m in Sources */,
 				6003F59E195388D20070C39A /* SZAppDelegate.m in Sources */,
+				2192F15F252308F10031F726 /* SZGifImageView.m in Sources */,
 				21CAE28B24727DFD00CADEB3 /* SZTableFreshViewController.m in Sources */,
 				210DDFCB24976A4000722B97 /* SZPlayerCollectionViewCell.m in Sources */,
 				210DDFC22497672400722B97 /* SZPlayerViewController.m in Sources */,
