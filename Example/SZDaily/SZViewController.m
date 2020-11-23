@@ -7,6 +7,7 @@
 //
 
 #import "SZViewController.h"
+#import "SZAutoTableHeaderHeightViewController.h"
 #import "SZHeader.h"
 
 @interface SZViewController ()
@@ -64,6 +65,8 @@
 
 - (void)forbiddenTapAction {
     NSLog(@"forbiddenAction------Tap");
+    SZAutoTableHeaderHeightViewController *imageVC = [[SZAutoTableHeaderHeightViewController alloc] init];
+    [self presentViewController:imageVC animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

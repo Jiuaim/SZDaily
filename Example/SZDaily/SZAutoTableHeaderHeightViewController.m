@@ -54,6 +54,10 @@
 
 @implementation SZAutoTableHeaderHeightViewController
 
+- (void)dealloc {
+    NSLog(@"%s", __func__);
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -61,8 +65,6 @@
     self.tableView.tableHeaderView = self.testHeaderView;
     [self.tableView sz_sizeHeaderToFit];
 }
-
-
 
 #pragma mark - UITableViewDelegate & UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -79,6 +81,28 @@
     
     cell.textLabel.text = @"134543453sagagdgfadfgadfgadf";
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - UIScrollViewDelegate
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    NSLog(@"%s", __func__);
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    NSLog(@"%s", __func__);
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    NSLog(@"%s", __func__);
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    NSLog(@"%s", __func__);
 }
 
 - (UITableView *)tableView {

@@ -11,6 +11,7 @@
 		210DDFC5249767D700722B97 /* SZPlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 210DDFC4249767D700722B97 /* SZPlayerTableViewCell.m */; };
 		210DDFC8249768EE00722B97 /* SZPlayerCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 210DDFC7249768EE00722B97 /* SZPlayerCollectionViewFlowLayout.m */; };
 		210DDFCB24976A4000722B97 /* SZPlayerCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 210DDFCA24976A4000722B97 /* SZPlayerCollectionViewCell.m */; };
+		2133753C256B950200680A9D /* SZFloatingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2133753B256B950200680A9D /* SZFloatingHelper.m */; };
 		2172569224AC41EF003B7DB7 /* SZImageCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2172569124AC41EF003B7DB7 /* SZImageCacheViewController.m */; };
 		217256A124AC8428003B7DB7 /* subway.png in Resources */ = {isa = PBXBuildFile; fileRef = 217256A024AC8428003B7DB7 /* subway.png */; };
 		217256A324AC88F6003B7DB7 /* 4444.png in Resources */ = {isa = PBXBuildFile; fileRef = 217256A224AC88F6003B7DB7 /* 4444.png */; };
@@ -63,6 +64,8 @@
 		210DDFCC24976D5600722B97 /* UIKitMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitMacro.h; sourceTree = "<group>"; };
 		210DDFF1249DADA700722B97 /* Problem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Problem.h; sourceTree = "<group>"; };
 		210DDFF6249DB57400722B97 /* Pod.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Pod.md; sourceTree = "<group>"; };
+		2133753A256B950200680A9D /* SZFloatingHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZFloatingHelper.h; sourceTree = "<group>"; };
+		2133753B256B950200680A9D /* SZFloatingHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZFloatingHelper.m; sourceTree = "<group>"; };
 		2172569024AC41EF003B7DB7 /* SZImageCacheViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZImageCacheViewController.h; sourceTree = "<group>"; };
 		2172569124AC41EF003B7DB7 /* SZImageCacheViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZImageCacheViewController.m; sourceTree = "<group>"; };
 		217256A024AC8428003B7DB7 /* subway.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = subway.png; sourceTree = "<group>"; };
@@ -137,6 +140,7 @@
 		210DDFBE2497664B00722B97 /* Play */ = {
 			isa = PBXGroup;
 			children = (
+				21337539256B94C800680A9D /* AOP */,
 				2192F15C252308C30031F726 /* Gif */,
 				210DDFBF2497668300722B97 /* Player */,
 			);
@@ -165,6 +169,15 @@
 				21E97A11256B65EF002C05A3 /* Base.md */,
 			);
 			name = Mark;
+			sourceTree = "<group>";
+		};
+		21337539256B94C800680A9D /* AOP */ = {
+			isa = PBXGroup;
+			children = (
+				2133753A256B950200680A9D /* SZFloatingHelper.h */,
+				2133753B256B950200680A9D /* SZFloatingHelper.m */,
+			);
+			name = AOP;
 			sourceTree = "<group>";
 		};
 		2192F15C252308C30031F726 /* Gif */ = {
@@ -520,6 +533,7 @@
 				210DDFC8249768EE00722B97 /* SZPlayerCollectionViewFlowLayout.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 				21E97A0C256B6016002C05A3 /* SZBaseViewController.m in Sources */,
+				2133753C256B950200680A9D /* SZFloatingHelper.m in Sources */,
 				210DDFC5249767D700722B97 /* SZPlayerTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
