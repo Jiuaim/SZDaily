@@ -18,6 +18,8 @@
 		2192F15F252308F10031F726 /* SZGifImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2192F15E252308F10031F726 /* SZGifImageView.m */; };
 		21C386DF2470065E0036E7B1 /* SZDiedLockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21C386DE2470065E0036E7B1 /* SZDiedLockViewController.m */; };
 		21CAE28B24727DFD00CADEB3 /* SZTableFreshViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21CAE28A24727DFD00CADEB3 /* SZTableFreshViewController.m */; };
+		21E97A0C256B6016002C05A3 /* SZBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21E97A0B256B6016002C05A3 /* SZBaseViewController.m */; };
+		21E97A12256B65EF002C05A3 /* Base.md in Resources */ = {isa = PBXBuildFile; fileRef = 21E97A11256B65EF002C05A3 /* Base.md */; };
 		2E496882AB687049D3D6A726 /* Pods_SZDaily_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A591C2E5603CFF7E85556AF1 /* Pods_SZDaily_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
@@ -73,6 +75,9 @@
 		21C386DE2470065E0036E7B1 /* SZDiedLockViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZDiedLockViewController.m; sourceTree = "<group>"; };
 		21CAE28924727DFD00CADEB3 /* SZTableFreshViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZTableFreshViewController.h; sourceTree = "<group>"; };
 		21CAE28A24727DFD00CADEB3 /* SZTableFreshViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZTableFreshViewController.m; sourceTree = "<group>"; };
+		21E97A0A256B6016002C05A3 /* SZBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SZBaseViewController.h; sourceTree = "<group>"; };
+		21E97A0B256B6016002C05A3 /* SZBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SZBaseViewController.m; sourceTree = "<group>"; };
+		21E97A11256B65EF002C05A3 /* Base.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Base.md; sourceTree = "<group>"; };
 		44F2AF117833C98BC4766A46 /* Pods-SZDaily_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SZDaily_Example.debug.xcconfig"; path = "Target Support Files/Pods-SZDaily_Example/Pods-SZDaily_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		52ECD913D83F5562A08686D4 /* Pods-SZDaily_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SZDaily_Tests.release.xcconfig"; path = "Target Support Files/Pods-SZDaily_Tests/Pods-SZDaily_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* SZDaily_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SZDaily_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				210DDFF6249DB57400722B97 /* Pod.md */,
+				21E97A11256B65EF002C05A3 /* Base.md */,
 			);
 			name = Mark;
 			sourceTree = "<group>";
@@ -183,6 +189,15 @@
 				2172569124AC41EF003B7DB7 /* SZImageCacheViewController.m */,
 			);
 			name = Learn;
+			sourceTree = "<group>";
+		};
+		21E97A09256B5FF8002C05A3 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				21E97A0A256B6016002C05A3 /* SZBaseViewController.h */,
+				21E97A0B256B6016002C05A3 /* SZBaseViewController.m */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 		6003F581195388D10070C39A = {
@@ -222,6 +237,7 @@
 		6003F593195388D20070C39A /* Example for SZDaily */ = {
 			isa = PBXGroup;
 			children = (
+				21E97A09256B5FF8002C05A3 /* Base */,
 				210DDFF5249DB54400722B97 /* Mark */,
 				210DDFBE2497664B00722B97 /* Play */,
 				21C386DC2470063A0036E7B1 /* Learn */,
@@ -382,6 +398,7 @@
 				217256A124AC8428003B7DB7 /* subway.png in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
 				217256A324AC88F6003B7DB7 /* 4444.png in Resources */,
+				21E97A12256B65EF002C05A3 /* Base.md in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -502,6 +519,7 @@
 				6003F5A7195388D20070C39A /* SZViewController.m in Sources */,
 				210DDFC8249768EE00722B97 /* SZPlayerCollectionViewFlowLayout.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				21E97A0C256B6016002C05A3 /* SZBaseViewController.m in Sources */,
 				210DDFC5249767D700722B97 /* SZPlayerTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
