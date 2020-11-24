@@ -107,17 +107,24 @@ static SZFloatingHelper *helper;
 
 + (void)load {
     viewControllers = @[@"SZViewController", @"SZAutoTableHeaderHeightViewController"];
-    [UIViewController aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> userInfo){
-        NSString *vcs = NSStringFromClass([userInfo.instance class]);
-        if ([viewControllers containsObject:vcs]) {
-            [[SZFloatingHelper shareHelper] viewWillAppear:vcs];
-        }
-    } error:nil];
+    
+    /*
+     方案1：aspect hook UIViewController的viewWillAppear：方法
+     方案2：替换对应类的viewWillAppear：
+     方案3：遍历查询到需要监控的UIScrollView，设置代理为当前浮窗类，浮窗类实现UIScrollViewDelegate对应方法
+     */
+//    [UIViewController aspect_hookSelector:@selector(viewWillAppear:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> userInfo){
+//        NSString *vcs = NSStringFromClass([userInfo.instance class]);
+//        if ([viewControllers containsObject:vcs]) {
+//            [[SZFloatingHelper shareHelper] viewWillAppear:vcs];
+//        }
+//    } error:nil];
     
     NSArray *selectors = @[@"scrollViewWillBeginDragging:",
                            @"scrollViewDidEndDecelerating:",
                            @"scrollViewDidEndScrollingAnimation:",
-                           @"scrollViewDidEndDragging:willDecelerate:"];
+                           @"scrollViewDidEndDragging:willDecelerate:",
+                           @"viewWillAppear:"];
     
     for (NSString *vcs in viewControllers) {
         Class vcClass = NSClassFromString(vcs);
@@ -154,6 +161,13 @@ static SZFloatingHelper *helper;
 @end
 
 @implementation UIViewController(Floating)
+
+- (void)sz_viewWillAppear:(BOOL)animated {
+    if ([self canPerformAction:@selector(sz_viewWillAppear:) withSender:nil]) {
+        [self sz_viewWillAppear:animated];
+    }
+    [[SZFloatingHelper shareHelper] viewWillAppear:NSStringFromClass(self.class)];
+}
 
 - (void)sz_scrollViewWillBeginDragging:(UIScrollView *)scrollView {
     if ([self canPerformAction:@selector(sz_scrollViewWillBeginDragging:) withSender:nil]) {
